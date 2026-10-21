@@ -1,74 +1,323 @@
 
+/* =========================
+   RESET E IMPOSTAZIONI BASE
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f3eb;
-    color: #292929;
+:root {
+    --nero: #171512;
+    --rosso: #a92e27;
+    --rosso-scuro: #7d201c;
+    --crema: #f2e6ce;
+    --bianco: #fffaf0;
+    --verde: #526747;
+    --grigio: #b8afa0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--crema);
+    color: var(--nero);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: #8b2020;
+    padding: 22px 7%;
+    background-color: var(--nero);
+    color: var(--bianco);
+    border-bottom: 3px solid var(--rosso);
 }
 
 .logo {
-    color: white;
-    font-size: 24px;
+    font-size: 30px;
+    font-style: italic;
     font-weight: bold;
-    text-decoration: none;
+    color: var(--crema);
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ffd27d;
+    color: #d94a40;
 }
 
+/* =========================
+   HOME PAGE
+========================= */
+
 .hero {
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
+    align-items: flex-start;
+    padding: 80px 10%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 21, 18, 0.97),
+            rgba(23, 21, 18, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    color: var(--bianco);
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    max-width: 700px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d33a30;
 }
 
 .hero p {
     max-width: 550px;
-    line-height: 1.7;
-    margin-bottom: 25px;
+    font-size: 19px;
+    color: var(--crema);
+    margin-bottom: 30px;
 }
 
+/* =========================
+   PULSANTI
+========================= */
+
 .button {
-    background-color: #8b2020;
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: var(--rosso);
     color: white;
-    padding: 14px 25px;
-    border-radius: 6px;
-    text-decoration: none;
+    border: 2px solid var(--rosso);
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
-    background-color: #641515;
+    background-color: var(--rosso-scuro);
+    border-color: var(--rosso-scuro);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   TITOLI DELLE PAGINE
+========================= */
+
+.page-header {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: var(--nero);
+    color: var(--crema);
+    border-bottom: 4px solid var(--rosso);
+}
+
+.page-header h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--grigio);
+    font-size: 17px;
+}
+
+/* =========================
+   CONTENUTO DEL MENU
+========================= */
+
+.menu-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.menu-section {
+    margin-bottom: 45px;
+}
+
+.menu-section h2 {
+    font-size: 30px;
+    color: var(--rosso);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d5c4a5;
+}
+
+/* =========================
+   SINGOLI PRODOTTI
+========================= */
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.menu-item {
+    padding: 22px;
+    background-color: var(--bianco);
+    border: 1px solid #e2d4bd;
+    border-radius: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(23, 21, 18, 0.1);
+}
+
+.menu-item h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.menu-item p {
+    color: #686056;
+    font-size: 15px;
+}
+
+.menu-item .price {
+    display: block;
+    margin-top: 12px;
+    color: var(--rosso);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   IMMAGINI DEI PRODOTTI
+========================= */
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
+    background-color: var(--nero);
+    color: var(--crema);
+    text-align: center;
+    border-top: 4px solid var(--rosso);
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE - TABLET E MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 60px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .menu-container {
+        margin: 30px auto;
+        padding: 0 16px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        height: 220px;
+    }
+
+    .page-header {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
 }
