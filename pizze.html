@@ -1,102 +1,173 @@
-
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizze - Pizzeria Bella Napoli</title>
-    <link rel="stylesheet" href="style.css">
 
+    <title>Pizze - Pizzeria Bella Napoli</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-      <article class="prodotto">
-        <figure>
-          
-            
-          <img src="https://pizzerierricoporzio.it/wp-content/uploads/2025/01/margherita.png" alt="Pizza margherita con mozzarella e basilico" style="width:300px">
-          <figcaption>
-            <h3>Margherita</h3>
-            <p class="descrizione">Pomodoro, mozzarella fior di latte e basilico.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo" aria-hidden="true">€ 6,00</div>
-      </article>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html" class="logo">Bella Napoli</a>
 
-      <article class="prodotto">
-        <figure>
-          
-           
-          <img src="https://fiordigrano.minutocaffe.it/wp-content/uploads/2021/01/05333.jpg" alt="Pizza con prosciutto e funghi" style="width:200px" >
-          <figcaption>
-            <h3>Prosciutto e Funghi</h3>
-            <p class="descrizione">Salsa di pomodoro, mozzarella, prosciutto cotto e funghi champignon.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 9,00</div>
-      </article>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pizze.html">Pizze</a>
+            <a href="bevande.html">Bevande</a>
+            <a href="dolci.html">Dolci</a>
+        </div>
+    </nav>
 
-      <article class="prodotto">
-        <figure>
-             
-          <img src="https://fiordigrano.minutocaffe.it/wp-content/uploads/2021/01/04679.jpg" alt="Pizza con salame piccante"  style="width:200px">
-          <figcaption>
-            <h3>Diavola</h3>
-            <p class="descrizione">Pomodoro, mozzarella e salame piccante.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 9,00</div>
-      </article>
+    <!-- INTESTAZIONE -->
+    <header class="page-header">
+        <h1>Le Nostre Pizze</h1>
+        <p>Tradizione napoletana, ingredienti genuini e passione.</p>
+    </header>
 
-      <article class="prodotto">
-        <figure>
-            
-          <img src="https://static.vecteezy.com/ti/foto-gratuito/p1/68253040-delizioso-pizza-con-peperoni-funghi-bacon-e-fuso-mozzarella-su-bianca-sfondo-foto.jpeg" alt="Pizza speciale con ingredienti misti" style="width:250px">
-          <figcaption>
-            <h3>Speciale</h3>
-            <p class="descrizione">Mozzarella, funghi, olive, peperoni e salsa speciale della casa.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 10,00</div>
-      </article>
-      <article class="prodotto">
-        <figure>
-            
-          <img src="https://pizzeriahappydays.it/wp-content/uploads/2020/05/al-pistacchio2bis.png" alt="Pizza con mortadella, mozzarella e pistacchio" style="width:200px" >
-          <figcaption>
-            <h3>Mortadella e Pistacchio</h3>
-            <p class="descrizione">Mortadella, mozzarella, pistacchio e olio EVO.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 10,00</div>
-      </article>
-      <article class="prodotto">
-        <figure>
-            
-           
-          <img src="https://static.vecteezy.com/ti/foto-gratuito/p2/71097275-delizioso-pizza-sormontato-con-salsiccia-e-funghi-servito-caldo-e-fresco-foto.jpg" alt="Mozzarella, salsiccia e funghi champignon" style="width:200px" >
-          <figcaption>
-            <h3>Boscaiola</h3>
-            <p class="descrizione">Mozzarella, salsiccia e funghi champignon.</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 9,00</div>
-      </article>
-      <article class="prodotto">
-        <figure>
-             
-          <img src="https://planetpizzaal.it/media/prodotti/wurstel-patatine.jpg" alt="Pizza con salsa di pommodro, wurstel e patatine" style="width:200px" >
-          <figcaption>
-            <h3>Paperina</h3>
-            <p class="descrizione">Salsa di pommodro, wurstel e patatine</p>
-          </figcaption>
-        </figure>
-        <div class="prezzo">€ 7,00</div>
-      </article>
+    <!-- MENU PIZZE -->
+    <main class="menu-container">
+        <section class="menu-section">
 
-      
-       
-         
+            <h2>Le nostre specialità</h2>
+
+            <div class="menu-items">
+
+                <!-- MARGHERITA -->
+                <article class="menu-item">
+                    <img
+                        src="https://pizzerierricoporzio.it/wp-content/uploads/2025/01/margherita.png"
+                        alt="Pizza Margherita con mozzarella e basilico"
+                        loading="lazy"
+                    >
+
+                    <h3>Margherita</h3>
+
+                    <p>
+                        Pomodoro, mozzarella fior di latte e basilico.
+                    </p>
+
+                    <span class="price">€ 6,00</span>
+                </article>
+
+                <!-- PROSCIUTTO E FUNGHI -->
+                <article class="menu-item">
+                    <img
+                        src="https://fiordigrano.minutocaffe.it/wp-content/uploads/2021/01/05333.jpg"
+                        alt="Pizza con prosciutto cotto e funghi"
+                        loading="lazy"
+                    >
+
+                    <h3>Prosciutto e Funghi</h3>
+
+                    <p>
+                        Salsa di pomodoro, mozzarella,
+                        prosciutto cotto e funghi champignon.
+                    </p>
+
+                    <span class="price">€ 9,00</span>
+                </article>
+
+                <!-- DIAVOLA -->
+                <article class="menu-item">
+                    <img
+                        src="https://fiordigrano.minutocaffe.it/wp-content/uploads/2021/01/04679.jpg"
+                        alt="Pizza Diavola con salame piccante"
+                        loading="lazy"
+                    >
+
+                    <h3>Diavola</h3>
+
+                    <p>
+                        Pomodoro, mozzarella e salame piccante.
+                    </p>
+
+                    <span class="price">€ 9,00</span>
+                </article>
+
+                <!-- SPECIALE -->
+                <article class="menu-item">
+                    <img
+                        src="https://static.vecteezy.com/ti/foto-gratuito/p1/68253040-delizioso-pizza-con-peperoni-funghi-bacon-e-fuso-mozzarella-su-bianca-sfondo-foto.jpeg"
+                        alt="Pizza speciale con ingredienti misti"
+                        loading="lazy"
+                    >
+
+                    <h3>Speciale</h3>
+
+                    <p>
+                        Mozzarella, funghi, olive, peperoni
+                        e salsa speciale della casa.
+                    </p>
+
+                    <span class="price">€ 10,00</span>
+                </article>
+
+                <!-- MORTADELLA E PISTACCHIO -->
+                <article class="menu-item">
+                    <img
+                        src="https://pizzeriahappydays.it/wp-content/uploads/2020/05/al-pistacchio2bis.png"
+                        alt="Pizza con mortadella e pistacchio"
+                        loading="lazy"
+                    >
+
+                    <h3>Mortadella e Pistacchio</h3>
+
+                    <p>
+                        Mortadella, mozzarella, pistacchio e olio EVO.
+                    </p>
+
+                    <span class="price">€ 10,00</span>
+                </article>
+
+                <!-- BOSCAIOLA -->
+                <article class="menu-item">
+                    <img
+                        src="https://static.vecteezy.com/ti/foto-gratuito/p2/71097275-delizioso-pizza-sormontato-con-salsiccia-e-funghi-servito-caldo-e-fresco-foto.jpg"
+                        alt="Pizza Boscaiola con salsiccia e funghi"
+                        loading="lazy"
+                    >
+
+                    <h3>Boscaiola</h3>
+
+                    <p>
+                        Mozzarella, salsiccia e funghi champignon.
+                    </p>
+
+                    <span class="price">€ 9,00</span>
+                </article>
+
+                <!-- PAPERINA -->
+                <article class="menu-item">
+                    <img
+                        src="https://planetpizzaal.it/media/prodotti/wurstel-patatine.jpg"
+                        alt="Pizza con wurstel e patatine"
+                        loading="lazy"
+                    >
+
+                    <h3>Paperina</h3>
+
+                    <p>
+                        Salsa di pomodoro, mozzarella,
+                        wurstel e patatine.
+                    </p>
+
+                    <span class="price">€ 7,00</span>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Pizzeria Bella Napoli - Tutti i diritti riservati.</p>
+    </footer>
 
 </body>
 </html>
+```
