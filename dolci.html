@@ -1,15 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolci - Pizzeria Bella Napoli</title>
+    <title>Dolci - La Bella Napoli</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav aria-label="Navigazione principale">
+        <a href="index.html" class="logo">La Bella Napoli</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pizze.html">Pizze</a>
+            <a href="bevande.html">Bevande</a>
+            <a href="dolci.html" aria-current="page">Dolci</a>
+        </div>
+    </nav>
 
-    <!-- CONTENUTI DELLE PIZZE DA AGGIUNGERE -->
+    <header class="page-header">
+        <h1>I nostri dolci</h1>
+        <p>Un finale goloso, tra tradizione e dolcezza.</p>
+    </header>
 
+    <main class="menu-container">
+        <section class="menu-section" aria-labelledby="dolci-tradizionali">
+            <h2 id="dolci-tradizionali">Dolci della casa</h2>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <h3>Tiramisù</h3>
+                    <p>Savoiardi, caffè, crema al mascarpone e cacao amaro.</p>
+                    <span class="price">5,00 €</span>
+                </article>
+                <article class="menu-item">
+                    <h3>Panna cotta</h3>
+                    <p>Delicata panna cotta alla vaniglia con salsa ai frutti di bosco.</p>
+                    <span class="price">4,50 €</span>
+                </article>
+                <article class="menu-item">
+                    <h3>Cannolo siciliano</h3>
+                    <p>Cialda croccante ripiena di crema di ricotta e gocce di cioccolato.</p>
+                    <span class="price">4,50 €</span>
+                </article>
+                <article class="menu-item">
+                    <h3>Cheesecake ai frutti di bosco</h3>
+                    <p>Base di biscotti, crema al formaggio e copertura ai frutti di bosco.</p>
+                    <span class="price">5,50 €</span>
+                </article>
+                <article class="menu-item">
+                    <h3>Torta al cioccolato</h3>
+                    <p>Soffice torta al cioccolato fondente con una spolverata di zucchero a velo.</p>
+                    <span class="price">5,00 €</span>
+                </article>
+                <article class="menu-item">
+                    <h3>Babà napoletano</h3>
+                    <p>Dolce soffice della tradizione napoletana, con bagna al rum.</p>
+                    <span class="price">4,50 €</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>La Bella Napoli — Il sapore della tradizione</p>
+    </footer>
 </body>
 </html>
